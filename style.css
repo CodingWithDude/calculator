@@ -1,12 +1,12 @@
 :root {
   --background: #b3b1b1;
-  --btnBackground: #e6e6e6;
+  --btnBackground: #d8d8d8;
   --btnHover: #c7c5c5;
-  --border: black;
+  --border: #000000;
   --screen: #ffffff;
-  --font: black;
-  --clearBtnBackground: #ff7d6e;
-  --deleteBtnBackground: #6babff;
+  --font: #000000;
+  --deleteBtnBackground: #ff7d6e;
+  --backspaceBtnBackground: #6babff;
 }
 
 html {
@@ -39,6 +39,8 @@ main {
   border-radius: 10px;
   padding: 20px;
   user-select: none;
+  box-shadow: -5px -3px 13px 3px #393939;
+  margin-left: 15px;
 }
 
 .display {
@@ -74,23 +76,29 @@ main {
   border: 2px var(--border) solid;
   border-radius: 10px;
   font-size: 20px;
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0, 0, 0, 0.6);
 }
 
 .btn:hover {
   background-color: var(--btnHover);
   transform: scale(1.05);
 }
+
+.active {
+  box-shadow: 0 1px 0 #666, 0 1.5px 0 #444, 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
 .span2 {
   grid-column: span 2;
   margin-bottom: 10px;
 }
 
-#clearBtn {
-  background-color: var(--clearBtnBackground);
-}
-
 #deleteBtn {
   background-color: var(--deleteBtnBackground);
+}
+
+#backspaceBtn {
+  background-color: var(--backspaceBtnBackground);
 }
 
 /* FOOTER */
