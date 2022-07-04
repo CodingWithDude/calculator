@@ -1,0 +1,98 @@
+:root {
+  --background: lightgrey;
+  --border: black;
+  --screen: white;
+  --font: black;
+}
+
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Trispace", sans-serif;
+  /* footer support */
+  margin-bottom: 100px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 75vh;
+  min-height: 500px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.calculator {
+  width: 350px;
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.display {
+  background-color: var(--screen);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.displayLast {
+  min-height: 30px;
+  font-size: 18px;
+}
+
+.displayCurrent {
+  min-height: 60px;
+  font-size: 38px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  border: 2px var(--border) solid;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.span2 {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-github {
+  color: var(--font);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
