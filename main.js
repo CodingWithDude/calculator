@@ -1,3 +1,13 @@
+// takes onclick and simulates keydown
+function simulateKeydown(value) {
+  window.dispatchEvent(
+    new KeyboardEvent("keydown", {
+      key: value,
+    })
+  );
+}
+
+// main program
 window.addEventListener("load", function () {
   const displayCurrent = document.querySelector(".displayCurrent");
   const displayLast = document.querySelector(".displayLast");
@@ -8,23 +18,25 @@ window.addEventListener("load", function () {
   let newState = true;
 
   window.addEventListener("keydown", (e) => {
+    // check if starting new function
     if (!newState) {
       displayCurrent.innerText = "";
       displayLast.innerText = "";
       newState = true;
     }
+    // for numeric input
     if (
-      (e.key === "0" ||
-        e.key === "1" ||
-        e.key === "2" ||
-        e.key === "3" ||
-        e.key === "4" ||
-        e.key === "5" ||
-        e.key === "6" ||
-        e.key === "7" ||
-        e.key === "8" ||
-        e.key === "9") &&
-      newState
+      e.key === "0" ||
+      e.key === "1" ||
+      e.key === "2" ||
+      e.key === "3" ||
+      e.key === "4" ||
+      e.key === "5" ||
+      e.key === "6" ||
+      e.key === "7" ||
+      e.key === "8" ||
+      e.key === "9" ||
+      (e.key === "." && newState)
     ) {
       input += e.key;
       displayCurrent.innerText = input;
@@ -97,7 +109,6 @@ window.addEventListener("load", function () {
       displayLast.innerText = `${num1} * ${num2} =`;
       reset();
     }
-    console.log(e.key, input);
   });
 
   function reset() {

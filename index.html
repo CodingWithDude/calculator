@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js" defer></script>
+    <script src="main.js" defer></script>
     <title>Calculator</title>
   </head>
   <body>
@@ -27,24 +27,36 @@
           <div class="displayCurrent">0</div>
         </div>
         <div class="buttons">
-          <div id="clearBtn" class="btn span2">Clear</div>
-          <div id="deleteBtn" class="btn span2">Backspace</div>
-          <div class="btn">7</div>
-          <div class="btn">8</div>
-          <div class="btn">9</div>
-          <div class="btn">÷</div>
-          <div class="btn">4</div>
-          <div class="btn">5</div>
-          <div class="btn">6</div>
-          <div class="btn">x</div>
-          <div class="btn">1</div>
-          <div class="btn">2</div>
-          <div class="btn">3</div>
-          <div class="btn">-</div>
-          <div class="btn">.</div>
-          <div class="btn">0</div>
-          <div class="btn">=</div>
-          <div class="btn">+</div>
+          <div
+            id="clearBtn"
+            class="btn span2"
+            onclick="simulateKeydown('Delete')"
+          >
+            Clear
+          </div>
+          <div
+            id="deleteBtn"
+            class="btn span2"
+            onclick="simulateKeydown('Backspace')"
+          >
+            Backspace
+          </div>
+          <div class="btn" onclick="simulateKeydown('7')">7</div>
+          <div class="btn" onclick="simulateKeydown('8')">8</div>
+          <div class="btn" onclick="simulateKeydown('9')">9</div>
+          <div class="btn" onclick="simulateKeydown('/')">÷</div>
+          <div class="btn" onclick="simulateKeydown('4')">4</div>
+          <div class="btn" onclick="simulateKeydown('5')">5</div>
+          <div class="btn" onclick="simulateKeydown('6')">6</div>
+          <div class="btn" onclick="simulateKeydown('*')">x</div>
+          <div class="btn" onclick="simulateKeydown('1')">1</div>
+          <div class="btn" onclick="simulateKeydown('2')">2</div>
+          <div class="btn" onclick="simulateKeydown('3')">3</div>
+          <div class="btn" onclick="simulateKeydown('-')">-</div>
+          <div class="btn" onclick="simulateKeydown('.')">.</div>
+          <div class="btn" onclick="simulateKeydown('0')">0</div>
+          <div class="btn" onclick="simulateKeydown('Enter')">=</div>
+          <div class="btn" onclick="simulateKeydown('+')">+</div>
         </div>
       </div>
       <footer class="footer">
