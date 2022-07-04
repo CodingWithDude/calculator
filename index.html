@@ -23,40 +23,30 @@
     <main>
       <div class="calculator">
         <div class="display">
-          <div class="displayLast"></div>
-          <div class="displayCurrent">0</div>
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
         </div>
         <div class="buttons">
-          <div
-            id="deleteBtn"
-            class="btn span2"
-            onclick="simulateKeydown('Delete')"
-          >
-            Clear
-          </div>
-          <div
-            id="backspaceBtn"
-            class="btn span2"
-            onclick="simulateKeydown('Backspace')"
-          >
+          <div data-all-clear id="deleteBtn" class="btn span2">Clear</div>
+          <div data-backspace id="backspaceBtn" class="btn span2">
             Backspace
           </div>
-          <div class="btn" id="7" onclick="simulateKeydown('7')">7</div>
-          <div class="btn" id="8" onclick="simulateKeydown('8')">8</div>
-          <div class="btn" id="9" onclick="simulateKeydown('9')">9</div>
-          <div class="btn" id="/" onclick="simulateKeydown('/')">÷</div>
-          <div class="btn" id="4" onclick="simulateKeydown('4')">4</div>
-          <div class="btn" id="5" onclick="simulateKeydown('5')">5</div>
-          <div class="btn" id="6" onclick="simulateKeydown('6')">6</div>
-          <div class="btn" id="*" onclick="simulateKeydown('*')">x</div>
-          <div class="btn" id="1" onclick="simulateKeydown('1')">1</div>
-          <div class="btn" id="2" onclick="simulateKeydown('2')">2</div>
-          <div class="btn" id="3" onclick="simulateKeydown('3')">3</div>
-          <div class="btn" id="-" onclick="simulateKeydown('-')">-</div>
-          <div class="btn" id="." onclick="simulateKeydown('.')">.</div>
-          <div class="btn" id="0" onclick="simulateKeydown('0')">0</div>
-          <div class="btn" id="Enter" onclick="simulateKeydown('Enter')">=</div>
-          <div class="btn" id="+" onclick="simulateKeydown('+')">+</div>
+          <div data-number class="btn" onclick="toggleInactive()">7</div>
+          <div data-number class="btn">8</div>
+          <div data-number class="btn">9</div>
+          <div data-operation class="btn">÷</div>
+          <div data-number class="btn">4</div>
+          <div data-number class="btn">5</div>
+          <div data-number class="btn">6</div>
+          <div data-operation class="btn">*</div>
+          <div data-number class="btn">1</div>
+          <div data-number class="btn">2</div>
+          <div data-number class="btn">3</div>
+          <div data-operation class="btn">-</div>
+          <div data-number class="btn">.</div>
+          <div data-number class="btn">0</div>
+          <div data-equals class="btn">=</div>
+          <div data-operation class="btn">+</div>
         </div>
       </div>
     </main>
