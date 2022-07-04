@@ -48,6 +48,8 @@ main {
   padding: 10px 20px;
   margin-bottom: 20px;
   text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .displayLast {
