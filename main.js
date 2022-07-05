@@ -195,6 +195,8 @@ document.addEventListener("keydown", (e) => {
 
 // remove .active class css on keyup
 
+let elem = undefined;
+
 document.addEventListener("keyup", (e) => {
   for (elem of document.getElementsByClassName("active")) {
     elem.classList.remove("active");
